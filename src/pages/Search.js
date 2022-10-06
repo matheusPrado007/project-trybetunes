@@ -51,7 +51,6 @@ class Search extends React.Component {
     const { isSaveBtnDisable, isLoading, artist, apiArtist, artistName } = this.state;
     return (
       <div data-testid="page-search">
-        <Header />
         <form>
           <div>
             <label htmlFor="art">
@@ -76,6 +75,7 @@ class Search extends React.Component {
             {isLoading ? <Loading />
               : (
                 <div>
+                  <Header />
                   <p>
                     {`Resultado de álbuns de: ${artistName}`}
                   </p>
@@ -98,7 +98,6 @@ class Search extends React.Component {
                 </div>)}
           </div>
         </form>
-
       </div>
     );
   }
