@@ -38,7 +38,10 @@ class Album extends React.Component {
             ? <Loading />
             : (
               <div data-testid="page-album">
-                <MusicCard musics={ musics } />
+                <MusicCard
+                  musics={ musics }
+                  track={ musics.trackId }
+                />
               </div>
             )
         }
